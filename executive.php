@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
-        /* ================= CSS แม่แบบ (ใช้เหมือนกันทุกหน้า) ================= */
+
         :root {
             --primary-dark: #1e3a8a;   
             --pink-bright: #ff4b82;    
@@ -49,7 +49,7 @@
         img { max-width: 100%; height: auto; border-radius: 12px; }
         .center-img { display: block; margin: 0 auto 25px auto; box-shadow: 0 8px 20px rgba(0,0,0,0.15); border: 4px solid white; }
 
-        /* CSS สำหรับหน้าอื่นๆ (รวมไว้ที่นี่หมดแล้ว) */
+     
         .exec-top { display: flex; justify-content: center; margin-bottom: 35px; }
         .exec-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; }
         .exec-card { width: 180px; text-align: center; background: var(--white); padding: 15px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: all 0.3s; border-bottom: 4px solid var(--blue-bright); }

@@ -4,6 +4,6 @@ services:
   web:
     build: .
     ports:
-      - "8088:80"  # เข้าเว็บผ่าน http://localhost:8080
+      - "8088:80"  
     volumes:
-      - .:/var/www/html/  # ทำให้เวลาเราแก้โค้ดหรือเปลี่ยนรูป หน้าเว็บจะอัปเดตทันที
+      - .:/var/www/html/ 
