@@ -8,166 +8,195 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
-       
+        /* ================= Master CSS (Premium Navy & Gold) ================= */
         :root {
-            --primary-dark: #1e3a8a;   
-            --pink-bright: #ff4b82;    
-            --blue-bright: #00c6ff;    
-            --bg-color: #f0fdf4;       
-            --white: #ffffff;          
-            --gray-text: #475569;
+            --primary-blue: #0A2540;   
+            --primary-yellow: #ffffff; 
+            --white: #ffffff;
+            --text-dark: #333333;
+            --bg-light: #f8fafc;       
         }
 
-        body { 
-            font-family: 'Prompt', sans-serif; 
-            background-color: #f4f8fb; 
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(255, 75, 130, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(0, 198, 255, 0.2) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(255, 75, 130, 0.15) 0px, transparent 50%),
-                radial-gradient(at 0% 100%, rgba(0, 198, 255, 0.2) 0px, transparent 50%);
-            background-attachment: fixed;
-            margin: 0; 
-            color: var(--gray-text); 
-            line-height: 1.6;
+        body { font-family: 'Prompt', sans-serif; margin: 0; padding: 0; background-color: var(--bg-light); color: var(--text-dark); }
+
+        /* Header & Nav */
+        header { background-color: var(--primary-blue); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15); position: relative; z-index: 10; }
+        .header-logo { color: var(--primary-yellow); font-size: 24px; font-weight: 600; text-decoration: none; letter-spacing: 0.5px; }
+        
+        nav { display: flex; gap: 20px; }
+        nav a { color: var(--white); text-decoration: none; font-weight: 500; font-size: 16px; padding: 8px 16px; border-radius: 8px; transition: all 0.3s ease; }
+        nav a:hover, nav a.active { color: var(--primary-blue); background-color: var(--primary-yellow); box-shadow: 0 2px 10px rgba(246, 177, 51, 0.3); }
+
+        .page-container { max-width: 1100px; margin: 40px auto; padding: 40px; background-color: var(--white); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); animation: fadeIn 0.6s ease; }
+        h2 { color: var(--primary-blue); border-bottom: 3px solid var(--primary-yellow); display: inline-block; padding-bottom: 10px; margin-bottom: 30px; }
+
+        /* ================= CSS เฉพาะหน้าบุคลากร (Split Layout) ================= */
+        .personnel-layout {
+            display: grid;
+            grid-template-columns: 320px 1fr; /* แบ่งซ้าย 320px ขวาคือพื้นที่ที่เหลือ */
+            gap: 40px;
+            align-items: start;
         }
 
-        .container { max-width: 1050px; margin: 40px auto; background: var(--white); border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); overflow: hidden; border: 2px solid #fff; }
-        
-        header { background: linear-gradient(135deg, var(--pink-bright), #6b52ff); color: var(--white); text-align: center; padding: 40px 20px; }
-        header h1 { margin: 0; font-size: 32px; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
-        header p { margin: 10px 0 0; font-weight: 400; font-size: 16px; opacity: 0.9; }
-        
-        nav { display: flex; justify-content: center; flex-wrap: wrap; background-color: var(--white); padding: 15px 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        nav a { color: var(--primary-dark); padding: 10px 22px; margin: 5px; text-decoration: none; font-weight: 500; border-radius: 30px; transition: all 0.3s ease; }
-        nav a:hover, nav a.active { background-color: var(--pink-bright); color: var(--white); box-shadow: 0 4px 15px rgba(255, 75, 130, 0.4); transform: translateY(-2px); }
-        
-        .content { padding: 40px 50px; min-height: 400px; animation: fadeIn 0.6s ease; }
-        .content h2 { color: var(--primary-dark); text-align: center; margin-bottom: 30px; position: relative; display: inline-block; left: 50%; transform: translateX(-50%); }
-        .content h2::after { content: ''; position: absolute; width: 50%; height: 4px; background: linear-gradient(90deg, var(--pink-bright), var(--blue-bright)); bottom: -8px; left: 25%; border-radius: 2px; }
-        
-        img { max-width: 100%; height: auto; border-radius: 12px; }
-        .center-img { display: block; margin: 0 auto 25px auto; box-shadow: 0 8px 20px rgba(0,0,0,0.15); border: 4px solid white; }
+        /* กล่องสถิติด้านซ้าย */
+        .stats-sidebar {
+            background-color: var(--bg-light);
+            padding: 25px;
+            border-radius: 12px;
+            border-top: 4px solid var(--primary-yellow);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        .stats-table { width: 100%; border-collapse: collapse; margin-bottom: 25px; font-size: 14px; }
+        .stats-table th { text-align: left; padding: 10px 0; color: var(--primary-blue); border-bottom: 2px solid #e2e8f0; font-weight: 600; }
+        .stats-table td { padding: 8px 0; border-bottom: 1px dashed #e2e8f0; color: #475569; }
+        .stats-table td:last-child { text-align: right; font-weight: 600; color: var(--primary-blue); }
 
-
-        .exec-top { display: flex; justify-content: center; margin-bottom: 35px; }
-        .exec-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; }
-        .exec-card { width: 180px; text-align: center; background: var(--white); padding: 15px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: all 0.3s; border-bottom: 4px solid var(--blue-bright); }
-        .exec-card:hover { transform: translateY(-8px); border-bottom: 4px solid var(--pink-bright); box-shadow: 0 12px 25px rgba(255, 75, 130, 0.2); }
-        .exec-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
-        .exec-card h4 { margin: 0 0 5px; color: var(--primary-dark); font-weight: 600; font-size: 15px; }
-        .exec-card p { margin: 0; font-size: 13px; color: var(--gray-text); line-height: 1.4; }
-
-        .table-responsive { overflow-x: auto; margin-top: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 700px; }
-        th, td { padding: 12px 15px; text-align: left; font-size: 14px; }
-        th { background: linear-gradient(90deg, #1e3a8a, #3b82f6); color: white; font-weight: 500; font-size: 15px; white-space: nowrap; }
-        tr:nth-child(even) td { background-color: #f8fafc; }
-        tr:hover td { background-color: #eff6ff; }
-        td { border-bottom: 1px solid #e2e8f0; }
-        .text-center { text-align: center; }
-        .text-right { text-align: right; }
-        .group-header td { background-color: #e2e8f0 !important; font-weight: 600; color: var(--primary-dark); font-size: 15px; }
+        /* พื้นที่รูปภาพด้านขวา */
+        .profile-area { display: flex; flex-direction: column; gap: 40px; }
         
-        .badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; color: white; }
-        .badge-teacher { background: linear-gradient(135deg, #10b981, #059669); }
-        .badge-staff { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+        .profile-group { margin-bottom: 10px; }
+        .profile-group-title {
+            text-align: center;
+            font-size: 16px;
+            color: var(--primary-blue);
+            font-weight: 600;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        /* เส้นคั่นกลางหมวดหมู่แบบหรูหรา */
+        .profile-group-title::before, .profile-group-title::after {
+            content: ""; position: absolute; top: 50%; width: 35%; height: 1px; background: #cbd5e1;
+        }
+        .profile-group-title::before { left: 0; }
+        .profile-group-title::after { right: 0; }
 
-        .course-box { background: var(--white); padding: 25px; border-radius: 16px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
-        .course-box h3 { margin-top: 0; font-size: 20px; border-bottom: 2px dashed #e2e8f0; padding-bottom: 10px; }
-        .course-flex { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 15px; }
-        .course-col { flex: 1; min-width: 280px; }
-        .course-col h4 { margin: 0 0 10px 0; font-size: 16px; }
-        .course-col ul { padding-left: 20px; margin: 0; font-size: 14px; }
-        .course-col li { margin-bottom: 5px; }
+        .profile-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        
+        .profile-card { width: 170px; text-align: center; transition: transform 0.3s ease; }
+        .profile-card:hover { transform: translateY(-5px); }
+        .profile-card img {
+            width: 130px;
+            height: 170px; /* บังคับสัดส่วนรูปถ่ายติดบัตรแนวตั้ง */
+            object-fit: cover;
+            border: 3px solid var(--primary-blue); /* กรอบรูปสีกรมท่า */
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        .profile-card h5 { margin: 0 0 5px 0; font-size: 14px; color: var(--primary-blue); font-weight: 600; }
+        .profile-card p { margin: 0; font-size: 12px; color: #64748b; line-height: 1.4; }
 
-        footer { background: linear-gradient(135deg, #1e293b, #0f172a); color: #cbd5e1; text-align: center; padding: 30px 20px; font-size: 14px; }
-        footer p { margin: 5px 0; }
-        footer span { color: var(--pink-bright); font-weight: bold; }
+        footer { background-color: var(--primary-blue); color: rgba(255,255,255,0.7); text-align: center; padding: 25px; font-size: 14px; margin-top: auto; }
+        footer span { color: var(--primary-yellow); font-weight: 600; }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
-        @media (max-width: 768px) { .content { padding: 30px 20px; } .exec-card { width: 150px; } }
+
+        /* Responsive สำหรับมือถือ (ให้ตารางสถิติไปอยู่ด้านบน แล้วรูปอยู่ด้านล่าง) */
+        @media (max-width: 850px) {
+            .personnel-layout { grid-template-columns: 1fr; gap: 20px; }
+            .profile-group-title::before, .profile-group-title::after { width: 25%; }
+            nav { display: none; } /* ซ่อนเมนูชั่วคราวบนจอมือถือ */
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    
     <header>
-        <h1>วิทยาลัยพณิชยการบางนา</h1>
-        <p>มุ่งมั่นพัฒนาวิชาชีพ สู่ความเป็นเลิศ</p>
+        <a href="index.php" class="header-logo">วิทยาลัยพณิชยการบางนา</a>
+        <nav>
+            <a href="index.php">หน้าหลัก</a>
+            <a href="executive.php">คณะผู้บริหาร</a>
+            <a href="personnel.php" class="active">บุคลากร</a>
+            <a href="student.php">ข้อมูลนักเรียน</a>
+            <a href="department.php">หลักสูตร</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="index.php">หน้าหลัก</a>
-        <a href="executive.php">ข้อมูลผู้บริหาร</a>
-        <a href="personnel.php" class="active">ข้อมูลบุคลากร</a>
-        <a href="student.php">ข้อมูลนักเรียนนักศึกษา</a>
-        <a href="department.php">สาขาวิชาที่เปิดสอน</a>
-    </nav>
+    <main class="page-container">
+        <h2>ข้อมูลบุคลากร</h2>
 
-<h2>ข้อมูลบุคลากร</h2>
-        <p style='text-align:center; color: var(--pink-bright); margin-bottom: 20px;'>* ข้อมูลบางส่วนจากทำเนียบบุคลากร วิทยาลัยพณิชยการบางนา</p>
-        <div class='table-responsive'>
-            <table>
-                <tr>
-                    <th>ลำดับ</th>
-                    <th>ชื่อ - นามสกุล</th>
-                    <th>ตำแหน่งหน้าที่</th>
-                    <th>หน่วยงาน / แผนกวิชา</th>
-                    <th class='text-center'>ประเภทบุคลากร</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td style='color: var(--primary-dark); font-weight: 600;'>นายสมคิด มิตรอารีย์</td>
-                    <td>ครูชำนาญการ</td>
-                    <td>หัวหน้าแผนกวิชาสามัญสัมพันธ์</td>
-                    <td class='text-center'><span class='badge badge-teacher'>ครูผู้สอน</span></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td style='color: var(--primary-dark); font-weight: 600;'>นางสาวสายฝน อินอ่วม</td>
-                    <td>ครูชำนาญการ</td>
-                    <td>หัวหน้าแผนกวิชาการจัดการโลจิสติกส์</td>
-                    <td class='text-center'><span class='badge badge-teacher'>ครูผู้สอน</span></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td style='color: var(--primary-dark); font-weight: 600;'>นายสมโชค ราชบุรี</td>
-                    <td>ครู</td>
-                    <td>หัวหน้าแผนกวิชาการบัญชี</td>
-                    <td class='text-center'><span class='badge badge-teacher'>ครูผู้สอน</span></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td style='color: var(--primary-dark); font-weight: 600;'>นายพรชัย ตุ่นแก้ว</td>
-                    <td>ครูชำนาญการ</td>
-                    <td>หัวหน้าแผนกวิชาเทคโนโลยีสารสนเทศ</td>
-                    <td class='text-center'><span class='badge badge-teacher'>ครูผู้สอน</span></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td style='color: var(--primary-dark); font-weight: 600;'>นางปุณณสิริ เทียนชัยสุธารัตน์</td>
-                    <td>ครู</td>
-                    <td>หัวหน้าแผนกวิชาการจัดการธุรกิจค้าปลีก</td>
-                    <td class='text-center'><span class='badge badge-teacher'>ครูผู้สอน</span></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td style='color: var(--primary-dark); font-weight: 600;'>นางสาวรัตนา บุญชู</td>
-                    <td>เจ้าหน้าที่</td>
-                    <td>งานบุคลากร</td>
-                    <td class='text-center'><span class='badge badge-staff'>เจ้าหน้าที่</span></td>
-                </tr>
-            </table>
+        <div class="personnel-layout">
+            
+            <aside class="stats-sidebar">
+                <table class="stats-table">
+                    <tr><th colspan="2">จำแนกตามเพศ</th></tr>
+                    <tr><td>• ชาย</td><td>42</td></tr>
+                    <tr><td>• หญิง</td><td>83</td></tr>
+                    <tr><td>• ไม่ระบุ</td><td>19</td></tr>
+                    <tr style="background: #e2e8f0; font-weight: bold;"><td>รวม</td><td>144</td></tr>
+                </table>
+
+                <table class="stats-table">
+                    <tr><th colspan="2">จำแนกตามระดับการศึกษา</th></tr>
+                    <tr><td>• ปริญญาเอก</td><td>1</td></tr>
+                    <tr><td>• ปริญญาโท</td><td>31</td></tr>
+                    <tr><td>• ปริญญาตรี</td><td>69</td></tr>
+                    <tr><td>• ปวส. / ปวช.</td><td>5</td></tr>
+                    <tr><td>• อื่นๆ</td><td>38</td></tr>
+                </table>
+
+                <table class="stats-table">
+                    <tr><th colspan="2">จำแนกตามแผนกวิชา (ตัวอย่าง)</th></tr>
+                    <tr><td>• เทคโนโลยีสารสนเทศ</td><td>5</td></tr>
+                    <tr><td>• คอมพิวเตอร์ธุรกิจ</td><td>13</td></tr>
+                    <tr><td>• การบัญชี</td><td>13</td></tr>
+                    <tr><td>• การตลาด</td><td>9</td></tr>
+                    <tr><td>• ภาษาต่างประเทศ</td><td>13</td></tr>
+                </table>
+            </aside>
+
+            <section class="profile-area">
+                
+                <div class="profile-group">
+                    <div class="profile-group-title">หัวหน้าแผนก</div>
+                    <div class="profile-grid">
+                        <div class="profile-card">
+                            <img src="head1.jpg" alt="รูปบุคลากร"> <h5>นายพรชัย ตุ่นแก้ว</h5>
+                            <p>หัวหน้าแผนกวิชา<br>เทคโนโลยีสารสนเทศ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-group">
+                    <div class="profile-group-title">ครูประจำ</div>
+                    <div class="profile-grid">
+                        <div class="profile-card">
+                            <img src="teacher1.jpg" alt="รูปบุคลากร">
+                            <h5>นางพรจิรา เงินเจริญ</h5>
+                            <p>ครูประจำ<br>แผนกวิชาเทคโนโลยีสารสนเทศ</p>
+                        </div>
+                        <div class="profile-card">
+                            <img src="teacher2.jpg" alt="รูปบุคลากร">
+                            <h5>นายอดิศร กล่องทอง</h5>
+                            <p>ครูประจำ<br>แผนกวิชาเทคโนโลยีสารสนเทศ</p>
+                        </div>
+                        <div class="profile-card">
+                            <img src="teacher3.jpg" alt="รูปบุคลากร">
+                            <h5>นายเจิมวุฒิ แจ่มดวง</h5>
+                            <p>ครูประจำ<br>แผนกวิชาเทคโนโลยีสารสนเทศ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-group">
+                    <div class="profile-group-title">ครูผู้ช่วย</div>
+                    <div class="profile-grid">
+                        <div class="profile-card">
+                            <img src="teacher4.jpg" alt="รูปบุคลากร">
+                            <h5>นายอภินัทธ์ ไรมันซา</h5>
+                            <p>ครูผู้ช่วย<br>แผนกวิชาเทคโนโลยีสารสนเทศ</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
         </div>
+    </main>
 
     <footer>
-        <p>วิทยาลัยพณิชยการบางนา เลขที่ 22 ซอย บางนา-ตราด 1 ถนนเทพรัตน แขวงบางนา เขตบางนา กรุงเทพมหานคร 10260</p>
-        <p>&copy; 2026 ระบบสารสนเทศสถานศึกษา | ออกแบบและพัฒนาเว็บไซต์โดย: <span>กิตติคุณ หนูแก้ว</span> (เทคโนโลยีสารสนเทศ)</p>
+        <p>&copy; 2026 ระบบสารสนเทศสถานศึกษา | พัฒนาโดย: <span>กิตติคุณ หนูแก้ว</span></p>
     </footer>
-
-</div>
 
 </body>
 </html>
