@@ -99,18 +99,43 @@
     </header>
 
     <nav>
-        <a href="index.php" class="active">หน้าหลัก</a>
+        <a href="index.php">หน้าหลัก</a>
         <a href="executive.php">ข้อมูลผู้บริหาร</a>
         <a href="personnel.php">ข้อมูลบุคลากร</a>
-        <a href="student.php">ข้อมูลนักเรียนนักศึกษา</a>
-        <a href="department.php">สาขาวิชาที่เปิดสอน</a>
+        <a href="student.php" class="active">ข้อมูลนักเรียนนักศึกษา</a>
+        <a href="department.php">สาขาวิชาที่เปิดสอน</a> 
     </nav>
 
-    <div class="content">
-        <h2>ยินดีต้อนรับสู่เว็บไซต์สถานศึกษา</h2>
-        <img src='school.jpg' alt='ภาพวิทยาลัย' class='center-img' style='max-height: 350px; object-fit: cover;'>
-        <p style='text-align: center; font-size: 16px; color: var(--primary-dark);'>ปัจจุบันจัดการเรียนการสอน 3 ระดับ คือ ระดับประกาศนียบัตรวิชาชีพ (ปวช.) ระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) และระดับปริญญาตรีหลักสูตรเทคโนโลยีบัณฑิต</p>
-    </div>
+<h2>ข้อมูลนักเรียน นักศึกษา</h2>
+        <p style='text-align:center; color: var(--pink-bright); margin-bottom: 20px;'>* สรุปยอดนักเรียน นักศึกษา จำแนกตามระดับชั้นและสาขาวิชา</p>
+        <div class='table-responsive'>
+            <table>
+                <tr>
+                    <th class='text-center'>ระดับชั้น</th>
+                    <th>สาขาวิชา</th>
+                    <th class='text-right'>ชาย (คน)</th>
+                    <th class='text-right'>หญิง (คน)</th>
+                    <th class='text-right'>รวม (คน)</th>
+                </tr>
+                <tr class='group-header'><td colspan='5'>ระดับชั้น ปวช. 1</td></tr>
+                <tr><td class='text-center'>ปวช.1</td><td>การจัดการสำนักงานดิจิทัล</td><td class='text-right'>4</td><td class='text-right'>11</td><td class='text-right'>15</td></tr>
+                <tr><td class='text-center'>ปวช.1</td><td>การตลาด</td><td class='text-right'>29</td><td class='text-right'>62</td><td class='text-right'>91</td></tr>
+                <tr><td class='text-center'>ปวช.1</td><td>การบัญชี</td><td class='text-right'>12</td><td class='text-right'>63</td><td class='text-right'>75</td></tr>
+                <tr><td class='text-center'>ปวช.1</td><td>เทคโนโลยีธุรกิจดิจิทัล</td><td class='text-right'>60</td><td class='text-right'>33</td><td class='text-right'>93</td></tr>
+                <tr><td class='text-center'>ปวช.1</td><td>โลจิสติกส์</td><td class='text-right'>41</td><td class='text-right'>65</td><td class='text-right'>106</td></tr>
+                
+                <tr class='group-header'><td colspan='5'>ระดับชั้น ปวช. 2</td></tr>
+                <tr><td class='text-center'>ปวช.2</td><td>การตลาด</td><td class='text-right'>19</td><td class='text-right'>73</td><td class='text-right'>92</td></tr>
+                <tr><td class='text-center'>ปวช.2</td><td>การบัญชี</td><td class='text-right'>5</td><td class='text-right'>70</td><td class='text-right'>75</td></tr>
+                <tr><td class='text-center'>ปวช.2</td><td>เทคโนโลยีธุรกิจดิจิทัล</td><td class='text-right'>67</td><td class='text-right'>44</td><td class='text-right'>111</td></tr>
+                <tr><td class='text-center'>ปวช.2</td><td>โลจิสติกส์</td><td class='text-right'>20</td><td class='text-right'>50</td><td class='text-right'>70</td></tr>
+
+                <tr class='group-header'><td colspan='5'>ระดับชั้น ปวส. 1</td></tr>
+                <tr><td class='text-center'>ปวส.1</td><td>การจัดการโลจิสติกส์และซัพพลายเชน</td><td class='text-right'>15</td><td class='text-right'>22</td><td class='text-right'>37</td></tr>
+                <tr><td class='text-center'>ปวส.1</td><td>การตลาด</td><td class='text-right'>12</td><td class='text-right'>36</td><td class='text-right'>48</td></tr>
+                <tr><td class='text-center'>ปวส.1</td><td>เทคโนโลยีธุรกิจดิจิทัล</td><td class='text-right'>35</td><td class='text-right'>12</td><td class='text-right'>47</td></tr>
+            </table>
+        </div>
 
     <footer>
         <p>วิทยาลัยพณิชยการบางนา เลขที่ 22 ซอย บางนา-ตราด 1 ถนนเทพรัตน แขวงบางนา เขตบางนา กรุงเทพมหานคร 10260</p>

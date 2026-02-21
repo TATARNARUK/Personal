@@ -98,19 +98,44 @@
         <p>มุ่งมั่นพัฒนาวิชาชีพ สู่ความเป็นเลิศ</p>
     </header>
 
-    <nav>
-        <a href="index.php" class="active">หน้าหลัก</a>
-        <a href="executive.php">ข้อมูลผู้บริหาร</a>
+<nav>
+        <a href="index.php">หน้าหลัก</a>
+        <a href="executive.php" class="active">ข้อมูลผู้บริหาร</a>
         <a href="personnel.php">ข้อมูลบุคลากร</a>
         <a href="student.php">ข้อมูลนักเรียนนักศึกษา</a>
         <a href="department.php">สาขาวิชาที่เปิดสอน</a>
     </nav>
 
-    <div class="content">
-        <h2>ยินดีต้อนรับสู่เว็บไซต์สถานศึกษา</h2>
-        <img src='school.jpg' alt='ภาพวิทยาลัย' class='center-img' style='max-height: 350px; object-fit: cover;'>
-        <p style='text-align: center; font-size: 16px; color: var(--primary-dark);'>ปัจจุบันจัดการเรียนการสอน 3 ระดับ คือ ระดับประกาศนียบัตรวิชาชีพ (ปวช.) ระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) และระดับปริญญาตรีหลักสูตรเทคโนโลยีบัณฑิต</p>
-    </div>
+  <h2>คณะผู้บริหารสถานศึกษา</h2>
+        <div class='exec-top'>
+            <div class='exec-card'>
+                <img src='dir.jpg' alt='ผู้อำนวยการ'>
+                <h4>นางสาวรุ่งนภา ปุณยานุเดช</h4>
+                <p>ผู้อำนวยการ</p>
+            </div>
+        </div>
+        <div class='exec-row'>
+            <div class='exec-card'>
+                <img src='dep1.jpg' alt='รองผู้อำนวยการ'>
+                <h4>นางสาวรัตติยา วานิชกลาง</h4>
+                <p>รองผู้อำนวยการ<br>ฝ่ายบริหารทรัพยากร</p>
+            </div>
+            <div class='exec-card'>
+                <img src='dep2.jpg' alt='รองผู้อำนวยการ'>
+                <h4>นางสาวสุจิตรา เกิดผล</h4>
+                <p>รองผู้อำนวยการ<br>ฝ่ายแผนงานและความร่วมมือ</p>
+            </div>
+            <div class='exec-card'>
+                <img src='dep3.jpg' alt='รองผู้อำนวยการ'>
+                <h4>นางสาวเอมอร อุปชีวะ</h4>
+                <p>รองผู้อำนวยการ<br>ฝ่ายพัฒนากิจการนักเรียนนักศึกษา</p>
+            </div>
+            <div class='exec-card'>
+                <img src='dep4.jpg' alt='รองผู้อำนวยการ'>
+                <h4>นางสาวอุรชา สารสรรค์</h4>
+                <p>รองผู้อำนวยการ<br>ฝ่ายวิชาการ</p>
+            </div>
+        </div>
 
     <footer>
         <p>วิทยาลัยพณิชยการบางนา เลขที่ 22 ซอย บางนา-ตราด 1 ถนนเทพรัตน แขวงบางนา เขตบางนา กรุงเทพมหานคร 10260</p>

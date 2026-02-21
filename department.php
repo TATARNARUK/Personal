@@ -99,18 +99,67 @@
     </header>
 
     <nav>
-        <a href="index.php" class="active">หน้าหลัก</a>
+        <a href="index.php">หน้าหลัก</a>
         <a href="executive.php">ข้อมูลผู้บริหาร</a>
         <a href="personnel.php">ข้อมูลบุคลากร</a>
         <a href="student.php">ข้อมูลนักเรียนนักศึกษา</a>
-        <a href="department.php">สาขาวิชาที่เปิดสอน</a>
+        <a href="department.php" class="active">สาขาวิชาที่เปิดสอน</a>
     </nav>
 
-    <div class="content">
-        <h2>ยินดีต้อนรับสู่เว็บไซต์สถานศึกษา</h2>
-        <img src='school.jpg' alt='ภาพวิทยาลัย' class='center-img' style='max-height: 350px; object-fit: cover;'>
-        <p style='text-align: center; font-size: 16px; color: var(--primary-dark);'>ปัจจุบันจัดการเรียนการสอน 3 ระดับ คือ ระดับประกาศนียบัตรวิชาชีพ (ปวช.) ระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) และระดับปริญญาตรีหลักสูตรเทคโนโลยีบัณฑิต</p>
-    </div>
+ <h2>หลักสูตรและสาขาวิชาที่เปิดสอน</h2>
+        <p style='text-align: center; color: var(--gray-text); margin-bottom: 25px;'>วิทยาลัยพณิชยการบางนา เปิดสอน 3 ระดับ ทั้งในระบบและระบบทวิภาคี</p>
+
+        <div class='course-box' style='border-left: 5px solid var(--pink-bright);'>
+            <h3 style='color: var(--primary-dark);'>📘 ระดับประกาศนียบัตรวิชาชีพ (ปวช.)</h3>
+            <div class='course-flex'>
+                <div class='course-col'>
+                    <h4 style='color: var(--pink-bright);'>▶ ระบบปกติ (ในระบบ)</h4>
+                    <ul>
+                        <li><b>ประเภทวิชาพณิชยกรรม:</b> การบัญชี, การตลาด, การจัดการสำนักงาน, คอมพิวเตอร์ธุรกิจ, ภาษาต่างประเทศ (อังกฤษ/จีน), การจัดการโลจิสติกส์</li>
+                        <li><b>ประเภทวิชาอุตสาหกรรมการท่องเที่ยว:</b> การโรงแรม (MEP), การท่องเที่ยว</li>
+                        <li><b>ประเภทวิชาเทคโนโลยีสารสนเทศ:</b> เทคโนโลยีสารสนเทศ</li>
+                    </ul>
+                </div>
+                <div class='course-col'>
+                    <h4 style='color: var(--pink-bright);'>▶ ระบบทวิภาคี</h4>
+                    <ul>
+                        <li><b>สาขาวิชาธุรกิจค้าปลีก:</b> ธุรกิจค้าปลีกสมัยใหม่, ธุรกิจอาหารและบริการ</li>
+                        <li><b>สาขาวิชาการโรงแรมและบริการ</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class='course-box' style='border-left: 5px solid var(--blue-bright);'>
+            <h3 style='color: var(--primary-dark);'>📙 ระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)</h3>
+            <div class='course-flex'>
+                <div class='course-col'>
+                    <h4 style='color: var(--blue-bright);'>▶ ระบบปกติ (ในระบบ)</h4>
+                    <ul>
+                        <li><b>ประเภทวิชาบริหารธุรกิจ:</b> การบัญชี, การตลาด, เทคโนโลยีธุรกิจดิจิทัล, การจัดการโลจิสติกส์และซัพพลายเชน</li>
+                        <li><b>ประเภทวิชาเทคโนโลยีสารสนเทศฯ:</b> เทคโนโลยีสารสนเทศ</li>
+                    </ul>
+                </div>
+                <div class='course-col'>
+                    <h4 style='color: var(--blue-bright);'>▶ ระบบทวิภาคี</h4>
+                    <ul>
+                        <li><b>ประเภทวิชาบริหารธุรกิจ:</b> การบัญชี, การตลาด, เทคโนโลยีธุรกิจดิจิทัล, การจัดการ, การจัดการโลจิสติกส์ฯ, ธุรกิจค้าปลีก</li>
+                        <li><b>ประเภทวิชาอุตสาหกรรมท่องเที่ยว:</b> การโรงแรม, การจัดประชุมและนิทรรศการ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class='course-box' style='border-left: 5px solid #6b52ff; margin-bottom: 0;'>
+            <h3 style='color: var(--primary-dark);'>🎓 ระดับปริญญาตรี (หลักสูตรเทคโนโลยีบัณฑิต)</h3>
+            <h4 style='color: #6b52ff;'>▶ ระบบทวิภาคี</h4>
+            <ul style='display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 10px;'>
+                <li>- สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล</li>
+                <li>- สาขาวิชาการโรงแรม</li>
+                <li>- สาขาวิชาการจัดการโลจิสติกส์</li>
+                <li>- สาขาวิชาการบัญชี</li>
+            </ul>
+        </div>
 
     <footer>
         <p>วิทยาลัยพณิชยการบางนา เลขที่ 22 ซอย บางนา-ตราด 1 ถนนเทพรัตน แขวงบางนา เขตบางนา กรุงเทพมหานคร 10260</p>

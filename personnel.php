@@ -99,18 +99,68 @@
     </header>
 
     <nav>
-        <a href="index.php" class="active">หน้าหลัก</a>
+        <a href="index.php">หน้าหลัก</a>
         <a href="executive.php">ข้อมูลผู้บริหาร</a>
-        <a href="personnel.php">ข้อมูลบุคลากร</a>
+        <a href="personnel.php" class="active">ข้อมูลบุคลากร</a>
         <a href="student.php">ข้อมูลนักเรียนนักศึกษา</a>
         <a href="department.php">สาขาวิชาที่เปิดสอน</a>
     </nav>
 
-    <div class="content">
-        <h2>ยินดีต้อนรับสู่เว็บไซต์สถานศึกษา</h2>
-        <img src='school.jpg' alt='ภาพวิทยาลัย' class='center-img' style='max-height: 350px; object-fit: cover;'>
-        <p style='text-align: center; font-size: 16px; color: var(--primary-dark);'>ปัจจุบันจัดการเรียนการสอน 3 ระดับ คือ ระดับประกาศนียบัตรวิชาชีพ (ปวช.) ระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) และระดับปริญญาตรีหลักสูตรเทคโนโลยีบัณฑิต</p>
-    </div>
+<h2>ข้อมูลบุคลากร</h2>
+        <p style='text-align:center; color: var(--pink-bright); margin-bottom: 20px;'>* ข้อมูลบางส่วนจากทำเนียบบุคลากร วิทยาลัยพณิชยการบางนา</p>
+        <div class='table-responsive'>
+            <table>
+                <tr>
+                    <th>ลำดับ</th>
+                    <th>ชื่อ - นามสกุล</th>
+                    <th>ตำแหน่งหน้าที่</th>
+                    <th>หน่วยงาน / แผนกวิชา</th>
+                    <th class='text-center'>ประเภทบุคลากร</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td style='color: var(--primary-dark); font-weight: 600;'>นายสมคิด มิตรอารีย์</td>
+                    <td>ครูชำนาญการ</td>
+                    <td>หัวหน้าแผนกวิชาสามัญสัมพันธ์</td>
+                    <td class='text-center'><span class='badge badge-teacher'>ครูผู้สอน</span></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td style='color: var(--primary-dark); font-weight: 600;'>นางสาวสายฝน อินอ่วม</td>
+                    <td>ครูชำนาญการ</td>
+                    <td>หัวหน้าแผนกวิชาการจัดการโลจิสติกส์</td>
+                    <td class='text-center'><span class='badge badge-teacher'>ครูผู้สอน</span></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td style='color: var(--primary-dark); font-weight: 600;'>นายสมโชค ราชบุรี</td>
+                    <td>ครู</td>
+                    <td>หัวหน้าแผนกวิชาการบัญชี</td>
+                    <td class='text-center'><span class='badge badge-teacher'>ครูผู้สอน</span></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td style='color: var(--primary-dark); font-weight: 600;'>นายพรชัย ตุ่นแก้ว</td>
+                    <td>ครูชำนาญการ</td>
+                    <td>หัวหน้าแผนกวิชาเทคโนโลยีสารสนเทศ</td>
+                    <td class='text-center'><span class='badge badge-teacher'>ครูผู้สอน</span></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td style='color: var(--primary-dark); font-weight: 600;'>นางปุณณสิริ เทียนชัยสุธารัตน์</td>
+                    <td>ครู</td>
+                    <td>หัวหน้าแผนกวิชาการจัดการธุรกิจค้าปลีก</td>
+                    <td class='text-center'><span class='badge badge-teacher'>ครูผู้สอน</span></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td style='color: var(--primary-dark); font-weight: 600;'>นางสาวรัตนา บุญชู</td>
+                    <td>เจ้าหน้าที่</td>
+                    <td>งานบุคลากร</td>
+                    <td class='text-center'><span class='badge badge-staff'>เจ้าหน้าที่</span></td>
+                </tr>
+            </table>
+        </div>
 
     <footer>
         <p>วิทยาลัยพณิชยการบางนา เลขที่ 22 ซอย บางนา-ตราด 1 ถนนเทพรัตน แขวงบางนา เขตบางนา กรุงเทพมหานคร 10260</p>
