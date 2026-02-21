@@ -1,3 +1,6 @@
+<?php
+header("Location: Personal/");
+?>
 <!DOCTYPE html>
 <html lang="th">
 <head>
